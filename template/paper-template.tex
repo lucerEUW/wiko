@@ -1,0 +1,151 @@
+\documentclass[a4paper,10pt,parskip,twocolumn]{article}
+
+\usepackage{graphicx}
+\usepackage{polyglossia}
+
+\usepackage[backend=biber,style=alphabetic]{biblatex}
+\addbibresource{paper-literatur.bib}
+
+
+\setdefaultlanguage[spelling=new,babelshorthands=true]{german}
+
+
+\usepackage{fontspec}
+\setmainfont{Source Serif Pro}
+\setsansfont{Source Sans Pro}
+
+
+% ------
+% sql-style
+\usepackage{listings}
+
+% Clickable URLs (optional)
+\usepackage{hyperref}
+
+\usepackage[left=2cm,right=2cm,top=3.0cm,bottom=3.0cm]{geometry}
+
+
+
+\title{Das selbstfahrende Auto}
+\author{
+	\Large Alex Muster \\[2mm]
+	\normalsize HTWK Leipzig \\
+	\texttt{alex.muster@stud.htwk-leipzig.de}
+}
+\date{09.12.2024}
+
+
+
+
+\begin{document}
+
+
+
+
+% -------
+% Titel und Abstract über beide Spalten
+\twocolumn[
+\begin{@twocolumnfalse}
+
+	\maketitle
+	\begin{abstract}
+	Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur magna lorem, tempor sed facilisis vel, porta et turpis. Sed et felis a massa dictum posuere. Aliquam hendrerit rhoncus ipsum sit amet placerat. Duis fringilla est eu arcu mollis faucibus non sit amet eros. Vestibulum risus nibh, dapibus vitae laoreet 
+	\end{abstract}
+
+% ------
+% Querstrich und zurück zum zweispaltigen Modus
+\mbox{}\hrule\mbox{}\\
+\end{@twocolumnfalse}
+]
+
+
+
+
+\section{Einführung}
+
+Lorem ipsum dolor sit amet, consectetur Informatik elit. Curabitur magna lorem, tempor sed facilisis vel, porta et turpis. Sed et felis a massa dictum posuere. Aliquam hendrerit rhoncus \cite{hitzler_semantic_2008} ipsum sit amet placerat. Duis fringilla est eu arcu mollis faucibus HTML5\footnote{HTML5: \url{http://www.w3.org/TR/html5/}} non sit amet eros. Vestibulum risus nibh, dapibus vitae laoreet eget, fringilla quis nisl. Proin consequat nibh  
+
+\begin{figure}[bt]
+	\centering
+	\includegraphics[width=0.3\textwidth]{Zeichnung.pdf}
+	\caption{Beispiel für ein einspaltiges Bild}
+	\label{bild1}
+\end{figure}
+
+sit amet mauris suscipit tincidunt. \footnote{Hochschule für Technik, Wirtschaft und Kultur Leipzig: \url{https://htwk-leipzig.de}}  Sed rutrum, purus nec aliquam faucibus, quam libero venenatis nisi, ut tempor mi sapien vel diam. Pellentesque sagittis elit non risus malesuada accumsan. Morbi consequat urna et lacus hendrerit sodales. Proin at urna neque, ut dapibus urna. Curabitur venenatis molestie convallis. Vestibulum blandit vulputate risus, quis sodales sapien porttitor non.
+
+Das hier ist ein Absatz, der die Grafik in Abbildung~\ref{bild1} detailliert erläutert, erklärt und interpretiert.
+
+
+
+
+Und hier haben wir noch ein zweites Bild, das über beide Spalten geht mit reingenommen (Abbildung~\ref{fig:bild2}).
+
+\begin{figure*}[t]
+  \centering
+  \includegraphics[width=\textwidth]{latex-biber.png}
+  \caption{Konfiguration TeXstudio}
+  \label{fig:bild2}
+\end{figure*}
+
+Besonders schön lassen sich vor allem auch mathematische Formeln $A \equiv B$ in $\exists$ \LaTeX setzen -- wer also so etwas braucht darf sich an diesem Beispiel orientieren: Ein Graphen $G=(V,E)$ mit $V=\{1,\ldots,n\}$ sei bestimmt durch die Kantenmenge
+\begin{eqnarray*}
+  E &= \{ & (u,v) \ | \ u,v\in V \ \wedge\\
+  && (v=u+1 \ \vee \ v=u+2) \quad \} .
+\end{eqnarray*}
+Das geht mit Word nicht so schön -- besonders wenn die Formeln wie in
+\begin{displaymath}
+  \sqrt{ \frac{n^{3}}{\sqrt{m}} \cdot \sum_{i=1}^n i^2 }
+\end{displaymath}
+mehrfach geschachtelt sind.
+
+\section{Literatur}
+
+Wie man einen besonders langweiligen Artikel schreibt ist in der Arbeit von \cite{sand-jensen_how_2007} erläutert. Für die Erstellung des eigenen Artikels bietet sich ein mehrstufiger Prozess an, bei dem man zunächst das Ziel skizziert, Literatur beschafft, den State-of-the-Art beschreibt und auf dieser Basis die eigene Arbeit darstellt \cite{berndtsson_thesis_2008}.
+Tabelle~\ref{tab:meinetabelle} zeigt eine einfache Tabelle.
+
+
+\begin{table}
+	\caption{BESCHREIBUNG}
+	\label{tab:meinetabelle}
+	\centering
+	\begin{tabular}{|c|c|}
+	\hline 1 & 2 \\ 
+	\hline 3 & 4 \\ 
+	\hline 
+	\end{tabular} 
+\end{table}
+
+
+
+Quisque vel arcu eget sapien euismod tristique rhoncus eu mauris. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Cras ligula lacus, dictum id scelerisque nec, venenatis vitae magna. Cras tristique porta elit, non tincidunt ligula placerat lobortis. Pellentesque quam enim, mattis in cursus eu, blandit et massa. Mauris aliquet turpis blandit elit vehicula sed posuere lectus facilisis. Donec blandit adipiscing tortor, quis lobortis purus eleifend vel. Nam a tellus at magna scelerisque blandit vel nec erat.
+
+\section{Section title example}
+Maecenas sed ultricies felis. Sed imperdiet dictum arcu a egestas. \cite{berndtsson_thesis_2008}
+In sapien ante, ultricies quis pellentesque ut, fringilla id sem. Proin justo libero, dapibus consequat auctor at, euismod et erat. Sed ut ipsum erat, iaculis vehicula lorem. Cras non dolor id libero blandit ornare. Pellentesque luctus fermentum eros ut posuere. Suspendisse rutrum suscipit massa sit amet molestie. Donec suscipit lacinia diam, eu posuere libero rutrum sed. Nam blandit lorem sit amet dolor vestibulum in lacinia purus varius. Ut tortor massa, rhoncus ut auctor eget, vestibulum ut justo.
+
+
+\begin{itemize}
+\item Donec dolor arcu, rutrum id molestie in, viverra sed diam.
+\item Curabitur feugiat, 
+
+\end{itemize}
+Quisque vel arcu eget sapien euismod tristique rhoncus eu mauris. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Cras ligula lacus, dictum id scelerisque nec, venenatis vitae magna. Cras tristique porta elit, non tincidunt ligula placerat lobortis. Pellentesque quam enim, mattis in cursus eu, blandit et massa. Mauris aliquet turpis blandit elit vehicula sed posuere lectus facilisis. Donec blandit adipiscing tortor, quis lobortis purus eleifend vel. Nam a tellus at magna scelerisque blandit vel nec erat.
+
+Quisque vel arcu eget sapien euismod tristique rhoncus eu mauris. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Cras ligula lacus, dictum idscelerisque nec, venenatis vitae magna. Cras tristique porta elit, non tincidunt ligula placerat lobortis. Pellentesque quam enim, mattis in cursus eu, blandit et massa. Mauris aliquet turpis blandit elit vehicula sed posuere lectus facilisis. Donec blandit adipiscing tortor, quis lobortis purus eleifend vel. Nam a tellus at magna scelerisque blandit vel nec erat.
+
+\section{One more section}
+Vestibulum tincidunt accumsan nisl dapibus rhoncus. Phasellus pulvinar suscipit magna ut consectetur. Curabitur ipsum dui, consectetur id dignissim nec, sollicitudin id lacus. Aenean volutpat, neque sit amet luctus porta, neque dui pretium ipsum, non ultricies justo nibh id justo. Cras in magna dui, in faucibus leo. Nulla nec magna sit amet velit hendrerit semper in in sapien. Nam ullamcorper risus at purus luctus semper nec adipiscing sapien.
+
+% -------
+% englischsprachige Darstellung der Literatur
+%\bibliographystyle{plainnat}
+
+% -------
+% deutschsprachige Darstellung der Literatur
+%\bibliographystyle{alpha}
+\printbibliography
+
+
+
+\end{document}
